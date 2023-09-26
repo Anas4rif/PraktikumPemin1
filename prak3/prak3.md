@@ -7,7 +7,7 @@ PEMIN - A<br /><br />
 * ## Percobaan Instalasi NodeJS
 >- **langkah 1**<br /><br />
 >Buka halaman dibawah untuk mengunduh installer nodejs<br />
-```Integrasi MongoDB dan Express```<br /><br />
+[node js](https://nodejs.org/en)<br /><br />
 >- **Langkah 2**<br /><br />
 >Unduh dan jalankan installer<br /><br />
 >- **Langkah 3**<br /><br />
