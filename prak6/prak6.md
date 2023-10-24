@@ -113,7 +113,7 @@ PEMIN - A<br /><br />
 >use Illuminate\Http\Request;
 >use Illuminate\Http\Response; // import library Response
 >```
->![Screenshot](../Screenshoot/prak6/7.png)<br /><br />
+>![Screenshot](../Screenshoot/prak6/8.png)<br /><br />
 >2. Buatlah fungsi hello() yang berisi<br /><br />
 >```javascript
 ><?php
@@ -146,16 +146,16 @@ PEMIN - A<br /><br />
 >    }
 >}
 >```
->![Screenshot](../Screenshoot/prak6/8.png)<br /><br />
+>![Screenshot](../Screenshoot/prak6/9.png)<br /><br />
 >3. Tambahkan route /hello pada file routes/web.php<br /><br />
 >```javascript
 ><?php
 >$router->get('/', ['uses' => 'HomeController@index']);
 >$router->get('/hello', ['uses' => 'HomeController@hello']); // route hello
 >```
->![Screenshot](../Screenshoot/prak6/9.png)<br /><br />
+>![Screenshot](../Screenshoot/prak6/10.png)<br /><br />
 >4. Jalankan aplikasi pada route /hello<br /><br />
->![Screenshot](../Screenshoot/prak6/10.png)<br /><br /
+>![Screenshot](../Screenshoot/prak6/11.png)<br /><br />
 * ## Penerapam
 >1. Lakukan import model User dengan menambahkan baris berikut di bagian atas file<br /><br />
 >```javascript
@@ -165,7 +165,7 @@ PEMIN - A<br /><br />
 >use Illuminate\Http\Request;
 >use Illuminate\Http\Response;
 >```
->![Screenshot](../Screenshoot/prak6/11.png)<br /><br />
+>![Screenshot](../Screenshoot/prak6/12.png)<br /><br />
 >2. Tambahkan ketiga fungsi berikut di HomeController.php<br /><br />
 >```javascript
 ><?php
@@ -224,7 +224,7 @@ PEMIN - A<br /><br />
 >    // Tiga Fungsi
 >}
 >```
->![Screenshot](../Screenshoot/prak6/12.png)<br /><br />
+>![Screenshot](../Screenshoot/prak6/13.png)<br /><br />
 >3. Tambahkan ketiga route pada file routes/web.php menggunakan group route<br /><br />
 >```javascript
 >$router->get('/', ['uses' => 'HomeController@index']);
@@ -236,11 +236,11 @@ PEMIN - A<br /><br />
 >    $router->get('/all', ['uses' => 'HomeController@getUsers']);
 >});
 >```
->![Screenshot](../Screenshoot/prak6/13.png)<br /><br />
->4. Jalankan aplikasi pada route /users/default menggunakan Postman<br /><br />
 >![Screenshot](../Screenshoot/prak6/14.png)<br /><br />
+>4. Jalankan aplikasi pada route /users/default menggunakan Postman<br /><br />
+>![Screenshot](../Screenshoot/prak6/15.png)<br /><br />
 >5. Jalankan aplikasi pada route /users/new dengan mengisi body sebagai berikut<br /><br />
 >![Screenshot](../Screenshoot/prak6/exm2.png)<br /><br />
->![Screenshot](../Screenshoot/prak6/15.png)<br /><br />
->6. Jalankan aplikasi pada route /users/all<br /><br />
 >![Screenshot](../Screenshoot/prak6/16.png)<br /><br />
+>6. Jalankan aplikasi pada route /users/all<br /><br />
+>![Screenshot](../Screenshoot/prak6/17.png)<br /><br />
