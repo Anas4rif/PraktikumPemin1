@@ -8,7 +8,7 @@ PEMIN - A<br /><br />
 >Berikut adalah tabel yang akan digunakan pada percobaan ini<br /><br />
 >![Screenshot](../Screenshoot/prak7/exm1.png)<br /><br />
 >1. Sebelum membuat migrasi database atau membuat tabel pastikan server database aktif kemudian pastikan sudah membuat database dengan nama ```lumenpost``` <br /><br />
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/1.png)<br /><br />
 >2. Kemudian ubah konfigurasi database pada file .env menjadi seperti berikut <br /><br />
 >```javascript
 >DB_CONNECTION=mysql
@@ -18,7 +18,7 @@ PEMIN - A<br /><br />
 >DB_USERNAME=root
 >DB_PASSWORD=
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/2.png)<br /><br />
 >3. Setelah mengubah konfigurasi pada file .env, kita juga perlu menghidupkan beberapa library bawaan dari lumen dengan membuka file app.php pada folder bootstrap dan mengubah baris ini <br /><br />
 >```javascript
 >// $app->withFacades();
@@ -29,7 +29,7 @@ PEMIN - A<br /><br />
 >$app->withFacades();
 >$app->withEloquent();
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/3.png)<br /><br />
 >4. Setelah itu jalankan command berikut untuk membuat file migration <br /><br />
 >```javascript
 >php artisan make:migration create_posts_table
@@ -37,7 +37,7 @@ PEMIN - A<br /><br />
 >php artisan make:migration create_tags_table
 >php artisan make:migration create_post_tag_table
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/4.png)<br /><br />
 >5. Ubah fungsi ```up()``` pada file migrasi ```create_posts_table```<br /><br />
 >```javascript
 >#sebelumnya
@@ -62,7 +62,7 @@ PEMIN - A<br /><br />
 >    }
 >...
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/5.png)<br /><br />
 >6. Ubah fungsi ```up()``` pada file ```create_comments_table``` <br /><br />
 >```javascript
 >#sebelumnya
@@ -88,7 +88,7 @@ PEMIN - A<br /><br />
 >    }
 >...
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/6.png)<br /><br />
 >7. Ubah fungsi ```up()``` pada file ```create_tags_table``` <br /><br />
 >```javascript
 >#sebelumnya
@@ -113,7 +113,7 @@ PEMIN - A<br /><br />
 >    }
 >...
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/7.png)<br /><br />
 >8. Ubah fungsi ```up()``` pada file ```create_post_tag_table``` <br /><br />
 >```javascript
 >#sebelumnya
@@ -139,12 +139,12 @@ PEMIN - A<br /><br />
 >    }
 >...
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/8.png)<br /><br />
 >9. Kemudian jalankan command<br /><br />
 >```javascript
 >php artisan migrate
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/9.png)<br /><br />
 * ## Pembuatan Model
 >1. Buatlah file dengan nama Post.php dan isi dengan baris kode berikut <br /><br />
 >```javascript
@@ -169,7 +169,7 @@ PEMIN - A<br /><br />
 >    protected $hidden = [];
 >}
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/10.png)<br /><br />
 >2. Buatlah file dengan nama Comment.php dan isi dengan baris kode berikut <br /><br />
 >```javascript
 ><?php
@@ -193,7 +193,7 @@ PEMIN - A<br /><br />
 >    protected $hidden = [];
 >}
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/11.png)<br /><br />
 >3. Buatlah file dengan nama Tag.php dan isi dengan baris kode berikut <br /><br />
 >```javascript
 ><?php
@@ -217,7 +217,7 @@ PEMIN - A<br /><br />
 >    protected $hidden = [];
 >}
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/12.png)<br /><br />
 * ## Relasi One-to-Many
 >1. Tambahkan fungsi ```comments()``` pada file ```Post.php``` <br /><br />
 >```javascript
@@ -234,7 +234,7 @@ PEMIN - A<br /><br />
 >    }
 >}
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/13.png)<br /><br />
 >2. Tambahkan fungsi ```post()``` dan atribut postId pada ```$fillable``` pada file ```Comment.php``` <br /><br />
 >```javascript
 ><?php
@@ -259,7 +259,7 @@ PEMIN - A<br /><br />
 >    }
 >}
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/14.png)<br /><br />
 >3. Buatlah file ```PostController.php``` dan isilah dengan baris kode berikut <br /><br />
 >```javascript
 ><?php
@@ -308,7 +308,7 @@ PEMIN - A<br /><br />
 >    }
 >}
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/15.png)<br /><br />
 >4. Buatlah file ```CommentController.php``` dan isilah dengan baris kode berikut <br /><br />
 >```javascript
 ><?php
@@ -343,7 +343,7 @@ PEMIN - A<br /><br />
 >    }
 >}
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/16.png)<br /><br />
 >5. Tambahkan baris berikut pada ```routes/web.php``` <br /><br />
 >```javascript
 ><?php
@@ -356,13 +356,13 @@ PEMIN - A<br /><br />
 >    $router->post('/', ['uses' => 'CommentController@createComment']);
 >});
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/17.png)<br /><br />
 >6. Buatlah satu post menggunakan Postman <br /><br />
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/18.png)<br /><br />
 >7. Buatlah satu comment menggunakan Postman <br /><br />
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/19.png)<br /><br />
 >8. Tampilkan post menggunakan Postman <br /><br />
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/20.png)<br /><br />
 * ## Relasi Many-to-Many
 >1. Tambahkan fungsi ```tags()``` pada file ```Post.php``` <br /><br />
 >```javascript
@@ -378,7 +378,7 @@ PEMIN - A<br /><br />
 >    }
 >}
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/21.png)<br /><br />
 >2. Tambahkan fungsi ```posts()``` pada file ```Tag.php``` <br /><br />
 >```javascript
 ><?php
@@ -393,7 +393,7 @@ PEMIN - A<br /><br />
 >    }
 >}
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/22.png)<br /><br />
 >3. Buatlah file ```TagController.php``` dan isilah dengan baris kode berikut <br /><br />
 >```javascript
 ><?php
@@ -427,7 +427,7 @@ PEMIN - A<br /><br />
 >    }
 >}
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/23.png)<br /><br />
 >4. Tambahkan fungsi ```addTag``` dan response tags pada ```PostController.php``` <br /><br />
 >```javascript
 ><?php
@@ -464,7 +464,7 @@ PEMIN - A<br /><br />
 >    }
 >}
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/24.png)<br /><br />
 >5. Tambahkan baris berikut pada ```routes/web.php``` <br /><br />
 >```javascript
 >$router->group(['prefix' => 'posts'], function () use ($router) {
@@ -477,18 +477,18 @@ PEMIN - A<br /><br />
 >    $router->post('/', ['uses' => 'TagController@createTag']);
 >});
 >```
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/25.png)<br /><br />
 >6. Buatlah satu tag menggunakan Postman <br /><br />
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/26.png)<br /><br />
 >7. Tambahkan tag “jadul” pada post “disana engkau berdua” <br /><br />
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/27.png)<br /><br />
 >8. Tampilkan post “disana engkau berdua” menggunakan Postman <br /><br />
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/28.png)<br /><br />
 >9. Buatlah postingan “tanpamu apa artinya” menggunakan Postman <br /><br />
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/29.png)<br /><br />
 >10. Tambahkan tag “jadul” pada postingan “tanpamu apa artinya” <br /><br />
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/30.png)<br /><br />
 >11. Buatlah tag “lagu” menggunakan Postman <br /><br />
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/31.png)<br /><br />
 >12. Tambahkan tag “lagu” pada postingan “tanpamu apa artinya” <br /><br />
->![Screenshot](../Screenshoot/prak7/.png)<br /><br />
+>![Screenshot](../Screenshoot/prak7/32.png)<br /><br />
