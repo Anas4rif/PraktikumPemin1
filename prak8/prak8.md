@@ -55,7 +55,7 @@ class User extends Model
 }
 ```
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/1.png)<br /><br />
 
 3. Buatlah file AuthController.php dan isilah dengan baris kode berikut :
 
@@ -100,7 +100,7 @@ class AuthController extends Controller
 }
 ```
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/2.png)<br /><br />
 
 4. Tambahkan baris berikut pada routes/web.php:
 
@@ -112,7 +112,7 @@ $router->group(['prefix' => 'auth'], function () use ($router) {
 });
 ```
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/3.png)<br /><br />
 
 5. Jalankan aplikasi pada endpoint /auth/register dengan body berikut:
 
@@ -124,7 +124,7 @@ $router->group(['prefix' => 'auth'], function () use ($router) {
 }
 ```
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/4.png)<br /><br />
 
 * ## Authentication
 1. Buatlah fungsi login(Request $request) pada file AuthController.php:
@@ -169,7 +169,7 @@ public function login(Request $request)
 }
 ```
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/5.png)<br /><br />
 
 2. Tambahkan baris berikut pada routes/web.php: 
 
@@ -182,7 +182,7 @@ $router->group(['prefix' => 'auth'], function () use ($router) {
 });
 ```
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/6.png)<br /><br />
 
 3. Jalankan aplikasi pada endpoint /auth/login dengan body berikut:
 
@@ -193,7 +193,7 @@ $router->group(['prefix' => 'auth'], function () use ($router) {
 }
 ```
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/7.png)<br /><br />
 
 * ## Token
 1. Jalankan perintah berikut untuk membuat migrasi baru:
@@ -202,7 +202,7 @@ $router->group(['prefix' => 'auth'], function () use ($router) {
 php artisan make:migration add_column_token_to_users
 ```
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/8.png)<br /><br />
 
 2. Tambahkan baris berikut pada migration yang baru terbuat:
 
@@ -241,7 +241,7 @@ class AddColumnTokenToUsers extends Migration
 }
 ```
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/9.png)<br /><br />
 
 3. Tambahkan atribut token di $fillable pada User.php:
 
@@ -272,7 +272,7 @@ class User extends Model
 }
 ```
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/10.png)<br /><br />
 
 4. Tambahkan baris berikut pada file AuthController.php:
 
@@ -323,7 +323,7 @@ class AuthController extends Controller
 }
 ```
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/11.png)<br /><br />
 
 5. Jalankan perintah di bawah untuk menjalankan migrasi terbaru:
 
@@ -331,7 +331,7 @@ class AuthController extends Controller
 php artisan migrate
 ```
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/12.png)<br /><br />
 
 6. Jalankan aplikasi pada endpoint /auth/login dengan body berikut. Salinlah token yang didapat ke notepad:
 
@@ -342,7 +342,7 @@ php artisan migrate
 }
 ```
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/13.png)<br /><br />
 
 * ## Authorizationn
 1. Buatlah file Authorization.php pada folder App/Http/Middleware dan isilah dengan baris berikut:
@@ -387,7 +387,7 @@ class Authorization
 }
 ```
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/14.png)<br /><br />
 
 2. Tambahkan middleware yang baru dibuat pada bootstrap/app.php.:
 
@@ -410,7 +410,7 @@ $app->routeMiddleware([
 ]);
 ```
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/15.png)<br /><br />
 
 3. Buatlah fungsi home() pada HomeController.php:
 
@@ -437,7 +437,7 @@ class HomeController extends Controller
 }
 ```
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/16.png)<br /><br />
 
 4. Tambahkan baris berikut pada routes/web.php:
 
@@ -450,8 +450,8 @@ $router->get('/home', ['middleware' => 'auth','uses' => 'HomeController@home']);
 ...
 ```
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/17.png)<br /><br />
 
 5. Jalankan aplikasi pada endpoint /home dengan melampirkan nilai token yang didapat setelah login pada header
 
-![Screenshot](../Screenshoot/prak8/.png)<br /><br />
+![Screenshot](../Screenshoot/prak8/18.png)<br /><br />
